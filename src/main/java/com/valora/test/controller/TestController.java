@@ -1,14 +1,11 @@
 package com.valora.test.controller;
 
-import com.valora.library.dbbundle.core.ValoraBundleControl;
-import com.valora.library.dbbundle.producer.ValoraBundle;
 import jakarta.annotation.Nullable;
 import jakarta.websocket.server.PathParam;
-import org.hibernate.annotations.Parameter;
-import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ResourceBundle;
 
