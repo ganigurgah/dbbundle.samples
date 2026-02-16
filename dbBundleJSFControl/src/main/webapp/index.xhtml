@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="jakarta.faces.html"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+    <title>#{msg['app.title']}</title>
+</h:head>
+<h:body>
+    <h1>
+        <h:outputText value="#{msg['welcome.message']}" />
+    </h1>
+
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="#{msg['label.username']}: " />
+            <h:inputText value="#{loginBean.username}" />
+
+            <h:outputLabel value="#{msg['label.password']}: " />
+            <h:inputSecret value="#{loginBean.password}" />
+        </h:panelGrid>
+
+        <h:commandButton value="#{msg['button.login']}"
+                         action="#{loginBean.doLogin}" />
+    </h:form>
+
+    <!-- Dil değiştirme -->
+    <h:form>
+        <h:commandButton value="Türkçe"
+                         action="#{languageBean.changeLocale('tr')}" />
+        <h:commandButton value="English"
+                         action="#{languageBean.changeLocale('en')}" />
+        <h:commandButton value="Français"
+                         action="#{languageBean.changeLocale('fr')}" />
+    </h:form>
+</h:body>
+</html>
