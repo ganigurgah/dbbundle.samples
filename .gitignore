@@ -39,3 +39,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
+dbBundleJSFControl/valoradb.mv.db
